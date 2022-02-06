@@ -1,0 +1,36 @@
+ root{ 
+    
+    box-sizing:border-box;
+}
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+} 
+
+.container{
+    height: 100vh;
+ }
+
+.landing{
+    display: flex;
+    flex-flow: row;
+    height:100%;
+    width: 100%;
+   justify-content: center;
+}
+.landing-client-l{
+    background-color: whitesmoke;
+    flex: 0 auto;
+    max-width: 50%;
+   
+}
+
+.landing-student-r{
+    background-color: rgb(7, 7, 7);
+    flex:auto 0;
+    height: auto;
+    max-width: 50%;
+}
