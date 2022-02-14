@@ -1,4 +1,8 @@
- root{ 
+ :root{ 
+    --blackground: rgb(7, 7, 7);
+    --whiteground: rgb(241, 238, 241);
+    --client-font-co:rgb(17, 17, 17);
+    --academy-font-co:rgb(243, 241, 243);
     
     box-sizing:border-box;
 }
@@ -8,10 +12,26 @@
 body{
     width: 100vw;
     height: 100vh;
+    /* font-family: ; */
 } 
 
 .container{
     height: 100vh;
+ }
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+ }
+
+ /* .footer-ul{ */
+    
+ /* } */
+
+ .footer-p{
+    margin:.5rem;
  }
 
 .landing{
@@ -22,14 +42,18 @@ body{
    justify-content: center;
 }
 .landing-client-l{
-    background-color: whitesmoke;
+    background-color: var(--whiteground);
     flex: 0 auto;
     max-width: 50%;
    
 }
 
+.landing-img-r{
+    height: 100px;
+}
 .landing-student-r{
-    background-color: rgb(7, 7, 7);
+    background-color: var(--blackground);
+    color: var(--academy-font-co);
     flex:auto 0;
     height: auto;
     max-width: 50%;
