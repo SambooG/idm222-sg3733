@@ -37,24 +37,38 @@ body{
 .landing{
     display: flex;
     flex-flow: row;
+    justify-content: center;
     height:100%;
     width: 100%;
-   justify-content: center;
+
+}
+.landing-1{
+    display:flex;
+    justify-content: center;
 }
 .landing-client-l{
     background-color: var(--whiteground);
     flex: 0 auto;
-    max-width: 50%;
+    width: 50%;
    
 }
 
-.landing-img-r{
+.landing-img{
     height: 100px;
+    margin:2.3rem;
 }
 .landing-student-r{
     background-color: var(--blackground);
     color: var(--academy-font-co);
     flex:auto 0;
     height: auto;
-    max-width: 50%;
+    width: 50%;
+}
+
+.landing-title{
+    margin-top: 4rem;
+}
+
+@keyframes  {
+    
 }
