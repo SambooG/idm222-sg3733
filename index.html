@@ -9,29 +9,48 @@
     <title>Home Luxe Ink PMU</title>
 </head>
 <body>
-    <div class="container">
+    <main class="main">
 
         <section class="landing">
 
             <div class="landing-1 landing-client-l">
                 <h1 class="landing-title landing-title-l">LUXE INK PMU</h1>
                 <picture>
-                    <img src="SVG/Asset 1.svg" alt="Luxe Ink pink and black logo." class="landing-img landing-img-l">
+                    <img src="SVG/Asset 1.svg" alt="Luxe Ink pink and black logo." class="landing-logo landing-logo-l">
                 </picture>
+                
+                <div class="landing-hero-l">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="" />
+                        
+                        <!-- Once we grow our screen past 700px, use this image -->
+                        <source media="(min-width: 700px)" srcset="media/images/landing.sm (1).jpg" />
+                        
+                        <source media="(min-width: 350px)" srcset="media/images/landing.sm (1).jpg" />
+                        
+                        <!-- Big image, fallback if we have to -->
+                        <img class="landing-hero" alt="girl with brow outine" src="media/images/client/pexels-antoni-shkraba-5178001.jpg"/>
+                    </picture>
                 </div>
-            </picture>
-
+                
+            </div>
+            
+            
+            
             <div class="landing-1 landing-student-r">
                 <h1 class="landing-title landing-title-r"> LUXE INK ACADMEY</h1>
                 <picture>
-                    <img src="./media/images/LuxeLogo.svg" alt="Luxe Ink pink and black logo." class="landing-img landing-img-r">
+                    <img src="./media/images/LuxeLogo.svg" alt="Luxe Ink pink and black logo." class="landing-logo landing-log-r">
                 </picture>
             </div>
 
+            
+
         </section>
         
-    </div>
-    <footer class="footer footer-home"> 
+    </main>
+
+    <!-- <footer class="footer footer-home"> 
             
         <ul class="footer-ul footer-home-ul">
             <p class="footer-contact-p">Contact</p>
@@ -48,6 +67,6 @@
         <li a href =" ">FAQ</li>
         <li a href =" ">CANCELLATION</li>
     </ul>
-</footer>
+</footer> -->
 </body>
 </html>

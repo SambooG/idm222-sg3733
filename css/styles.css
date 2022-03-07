@@ -15,8 +15,18 @@ body{
     /* font-family: ; */
 } 
 
-.container{
-    height: 100vh;
+.client-top-svcs{
+     display: flex;
+    align-content:flex-start; 
+}
+
+.client-top-svcs-nav{
+    display: flex;
+    flex-direction: column;
+
+}
+.main{
+    min-height: 90vh;
  }
 
 .footer{
@@ -34,28 +44,49 @@ body{
     margin:.5rem;
  }
 
+ .header{
+     /* display: flex; */
+    /* flex-direction: row; */
+ }
+
 .landing{
     display: flex;
     flex-flow: row;
     justify-content: center;
-    height:100%;
-    width: 100%;
+    height:100vh;
+    /* width: 100vh;  */
+    margin-top:35px;
 
 }
 .landing-1{
     display:flex;
     justify-content: center;
+    flex-wrap: wrap;
+
+    
+    
+    
 }
 .landing-client-l{
     background-color: var(--whiteground);
-    flex: 0 auto;
     width: 50%;
+    
+    
    
 }
 
-.landing-img{
+.landing-hero{
+    margin-bottom: 2.5rem;
+}
+
+.landing-hero-l{
+    display: flex;
+ }
+
+.landing-logo{
     height: 100px;
     margin:2.3rem;
+    flex-wrap:wrap ;
 }
 .landing-student-r{
     background-color: var(--blackground);
@@ -63,12 +94,72 @@ body{
     flex:auto 0;
     height: auto;
     width: 50%;
+    
 }
 
 .landing-title{
     margin-top: 4rem;
+    
 }
 
-@keyframes  {
+
+@keyframes  slideleft{
     
+}
+
+.nav{
+    display: flex;
+    list-style: none;
+    align-items:center ;
+    flex-direction: column;
+}
+
+
+.nav-li{
+    list-style: none;
+    align-items:center;
+    display: flex;
+    padding:5px;
+}
+
+
+.nav-link{
+    text-decoration: none;
+    /* flex-direction: row; */
+    /* justify-items: center; */
+}
+
+.wrapper-client{
+    background: var(--whiteground);
+}
+
+.wrapper-academy{
+    background: var(--blackground);
+}
+
+@media screen and (min-width: 768px) {
+    
+    
+    
+    .nav{
+        display:flex;
+        /* justify-content: space-evenly; */
+        align-items: flex-end;
+        list-style: none;
+        flex-direction: row;
+        align-content: flex-end;
+    }
+
+    .logo{
+        height: 3rem;
+        margin-top: .4rem;
+        flex:1;
+    }
+    
+
+.nav-li{
+    justify-items: flex-start;
+}
+
+
 }
