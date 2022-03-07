@@ -3,16 +3,18 @@
     --whiteground: rgb(241, 238, 241);
     --client-font-co:rgb(17, 17, 17);
     --academy-font-co:rgb(243, 241, 243);
-    
-    box-sizing:border-box;
+    --font-headings: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 
+*{
+    box-sizing:border-box;
 
+}
 
 body{
     width: 100vw;
     height: 100vh;
-    /* font-family: ; */
+    font-family: var(--font-headings)
 } 
 
 .client-top-svcs{
@@ -52,16 +54,18 @@ body{
 .landing{
     display: flex;
     flex-flow: row;
-    justify-content: center;
+    /* justify-content: center; */
     height:100vh;
     /* width: 100vh;  */
     margin-top:35px;
 
 }
 .landing-1{
+    align-items: center;
+    align-content: center;
     display:flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     
     
@@ -69,36 +73,47 @@ body{
 }
 .landing-client-l{
     background-color: var(--whiteground);
-    width: 50%;
-    
-    
-   
-}
-
-.landing-hero{
-    margin-bottom: 2.5rem;
-}
-
-.landing-hero-l{
+    width: 50%;  
     display: flex;
- }
+    align-content: center;
+}
+
+/* .landing-hero{
+    margin-bottom: 2.5rem;
+} */
+
+/* .landing-hero-l{
+    display: flex;
+ } */
+
+ /* .landing-hero-r{
+    display: flex;
+    flex-wrap: wrap;
+ } */
 
 .landing-logo{
     height: 100px;
     margin:2.3rem;
-    flex-wrap:wrap ;
+    /* flex-wrap:wrap ; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
 }
 .landing-student-r{
     background-color: var(--blackground);
     color: var(--academy-font-co);
-    flex:auto 0;
     height: auto;
     width: 50%;
-    
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* display: flex;
+    flex-wrap: wrap;
+     */
 }
 
 .landing-title{
     margin-top: 4rem;
+    display: flex;
+    justify-content: center;
     
 }
 
