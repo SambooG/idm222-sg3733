@@ -8,7 +8,8 @@
 
 *{
     box-sizing:border-box;
-
+    text-decoration: none;
+    list-style: none;
 }
 
 body{
@@ -32,20 +33,31 @@ body{
  }
 
 .footer{
+    align-items: flex-end;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: flex-end;
- }
+   
+}
 
- /* .footer-ul{ */
-    
- /* } */
 
- .footer-p{
+.footer-black{
+background-color: var(--blackground);
+color: var(--academy-font-co);
+}
+
+.footer-p{
     margin:.5rem;
- }
+}
 
+.footer-pink{
+    background-color: var(--whiteground);
+    color: var(--client-font-co);
+}
+
+.footer-contact-ul{
+ color: var(--client-font-co);
+}
  .header{
      /* display: flex; */
     /* flex-direction: row; */
@@ -53,11 +65,10 @@ body{
 
 .landing{
     display: flex;
-    flex-flow: row;
-    /* justify-content: center; */
+    flex-flow: column;
     height:100vh;
-    /* width: 100vh;  */
-    margin-top:35px;
+  
+   
 
 }
 .landing-1{
@@ -72,42 +83,25 @@ body{
     
 }
 .landing-client-l{
-    background-color: var(--whiteground);
-    width: 50%;  
-    display: flex;
     align-content: center;
+    background-color: var(--whiteground);
+    /* width: 50%;   */
+    height: 50vh;
+    display: flex;
 }
 
-/* .landing-hero{
-    margin-bottom: 2.5rem;
-} */
-
-/* .landing-hero-l{
-    display: flex;
- } */
-
- /* .landing-hero-r{
-    display: flex;
-    flex-wrap: wrap;
- } */
 
 .landing-logo{
     height: 100px;
     margin:2.3rem;
-    /* flex-wrap:wrap ; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
+
 }
 .landing-student-r{
     background-color: var(--blackground);
     color: var(--academy-font-co);
-    height: auto;
-    width: 50%;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* display: flex;
-    flex-wrap: wrap;
-     */
+    height: 50vh;
+    /* width: 50%; */
+  
 }
 
 .landing-title{
@@ -120,6 +114,7 @@ body{
 
 @keyframes  slideleft{
     
+
 }
 
 .nav{
@@ -144,17 +139,77 @@ body{
     /* justify-items: center; */
 }
 
-.wrapper-client{
-    background: var(--whiteground);
-}
-
 .wrapper-academy{
     background: var(--blackground);
+    color:var(--academy-font-co);
+}
+.wrapper-client{
+    background: var(--whiteground);
+    color: var(--client-font-co);
+}
+
+.wrapper-contact{
+    background-color: var(--whiteground);
+    min-height: 90vh;
+}
+
+/* keyframe */
+.grow{
+    background-color: red;
+}
+
+@media screen and (min-width: 600px){
+    .landing{
+        display: flex;
+        flex-flow: row;
+        height:100vh;
+    
+    
+    }
+    .landing-1{
+        align-items: center;
+        align-content: center;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        height:100vh;
+    
+        
+        
+        
+    }
+    .landing-client-l{
+       
+        width: 50%;  
+        display: flex;
+        align-content: center;
+    }
+    
+    
+    .landing-logo{
+        height: 100px;
+        margin:2.3rem;
+    
+    }
+    .landing-student-r{
+        background-color: var(--blackground);
+        color: var(--academy-font-co);
+        height: auto;
+        width: 50%;
+      
+    }
+    
+    .landing-title{
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        
+    }
 }
 
 @media screen and (min-width: 768px) {
     
-    
+
     
     .nav{
         display:flex;
