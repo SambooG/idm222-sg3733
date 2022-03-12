@@ -12,10 +12,11 @@
     list-style: none;
 }
 
+
 body{
     width: 100vw;
     height: 100vh;
-    font-family: var(--font-headings)
+    font-family: var(--font-headings);
 } 
 
 .client-top-svcs{
@@ -62,7 +63,14 @@ color: var(--academy-font-co);
      /* display: flex; */
     /* flex-direction: row; */
  }
-
+ 
+ .landing-title-r a{
+     color:var(--academy-font-co)
+ }
+ 
+ .landing-title-l a{
+     color:var(--client-font-co)
+ }
 .landing{
     display: flex;
     flex-flow: column;
@@ -98,24 +106,21 @@ color: var(--academy-font-co);
 }
 .landing-student-r{
     background-color: var(--blackground);
-    color: var(--academy-font-co);
+    /* color:var(--academy-font-co); */
     height: 50vh;
     /* width: 50%; */
   
 }
 
 .landing-title{
-    margin-top: 4rem;
     display: flex;
+    margin-top: 4rem;
     justify-content: center;
-    
 }
 
 
-@keyframes  slideleft{
-    
 
-}
+
 
 .nav{
     display: flex;
@@ -154,11 +159,26 @@ color: var(--academy-font-co);
 }
 
 /* keyframe */
+@keyframes  slideLeft{
+    from{
+        transform: translate();
+    }
+}
+
+@keyframes  slideRight{
+
+}
+
 .grow{
     background-color: red;
 }
 
+.r-grow{
+    background-color: rgb(28, 87, 214);
+}
+
 @media screen and (min-width: 600px){
+    
     .landing{
         display: flex;
         flex-flow: row;
@@ -172,11 +192,7 @@ color: var(--academy-font-co);
         display:flex;
         justify-content: center;
         flex-direction: column;
-        height:100vh;
-    
-        
-        
-        
+        height:100vh; 
     }
     .landing-client-l{
        
@@ -192,8 +208,8 @@ color: var(--academy-font-co);
     
     }
     .landing-student-r{
-        background-color: var(--blackground);
-        color: var(--academy-font-co);
+        /* background-color: var(--blackground); */
+        /* color: var(--academy-font-co); */
         height: auto;
         width: 50%;
       
