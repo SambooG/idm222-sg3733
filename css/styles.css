@@ -1,5 +1,5 @@
  :root{ 
-    --blackground: rgb(7, 7, 7);
+    --blackground: rgb(41, 36, 36);
     --whiteground: rgb(241, 238, 241);
     --client-font-co:rgb(17, 17, 17);
     --academy-font-co:rgb(243, 241, 243);
@@ -14,11 +14,91 @@
 
 
 body{
-    width: 100vw;
-    height: 100vh;
     font-family: var(--font-headings);
+    font-size: 100%;
+    height: 100vh;
+    width: 100vw;
+
 } 
 
+.academy-course-info{
+    border: inset 3px rgb(235, 55, 196);
+    background-color: rgb(76, 77, 78);
+    border-style: ridge;
+    line-height: 1.4;
+    margin:40px 20px;
+    padding:20px;
+}
+
+.academy-main-heading{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.academy-course-info-curriculum{
+    display:flex ;
+    flex-flow: row wrap;
+}
+
+.academy-course-info-h3{
+    width:100%
+}
+
+.academy-course-info-description{
+    flex:1;
+   
+}
+
+.academy-course-info-1{
+    margin: 5%;
+    
+}
+.academy-course-info-1 a{
+    color: var(--academy-font-co);
+    cursor:pointer;
+}
+
+.academy-course-info-subheading{
+    margin: 5% ;
+}
+
+.academy-course-upcoming{
+    /* align-items: center; */
+    border: inset 3px rgb(235, 55, 196);
+    background-color: rgb(32, 33, 34);
+    border-style: ridge;
+    justify-content: center;
+    margin: 3rem;
+   padding: 5px;
+}
+
+
+.academy-li{
+    border: inset 3px rgb(235, 55, 196);
+    background-color: rgb(56, 57, 58);
+    border-style: ridge;
+    justify-content: center;
+    margin: 4rem 3rem;
+   padding: 5px;
+   width:70%;
+   display:flex;
+   flex-wrap: wrap;
+}
+
+.academy-li ul{
+    padding-left: 8%;
+}
+
+.academy-li--li{
+    width: 100%;
+    text-align: center
+}
+.academy-h2{
+    width: 100%;
+}
 .client-top-svcs{
      display: flex;
     align-content:flex-start; 
@@ -29,22 +109,19 @@ body{
     flex-direction: column;
 
 }
-.main{
-    min-height: 90vh;
- }
 
 .footer{
     align-items: flex-end;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-   
+    
 }
 
 
 .footer-black{
-background-color: var(--blackground);
-color: var(--academy-font-co);
+    background-color: var(--blackground);
+    color: var(--academy-font-co);
 }
 
 .footer-p{
@@ -57,27 +134,34 @@ color: var(--academy-font-co);
 }
 
 .footer-contact-ul{
- color: var(--client-font-co);
+    color: var(--client-font-co);
 }
- .header{
-     /* display: flex; */
-    /* flex-direction: row; */
- }
- 
- .landing-title-r a{
-     color:var(--academy-font-co)
- }
- 
- .landing-title-l a{
-     color:var(--client-font-co)
- }
+
+h1, h2, h3{
+    text-align: center;
+}
+.header-a a{
+    color: var(--academy-font-co);
+}
+
+.header-c a{
+    color: var(--client-font-co);
+}
+
+.landing-title-r a{
+    color:var(--academy-font-co)
+}
+
+.landing-title-l a{
+    color:var(--client-font-co)
+}
 .landing{
     display: flex;
     flex-flow: column;
     height:100vh;
-  
-   
-
+    
+    
+    
 }
 .landing-1{
     align-items: center;
@@ -85,9 +169,6 @@ color: var(--academy-font-co);
     display:flex;
     justify-content: center;
     flex-direction: column;
-
-    
-    
     
 }
 .landing-client-l{
@@ -102,14 +183,14 @@ color: var(--academy-font-co);
 .landing-logo{
     height: 100px;
     margin:2.3rem;
-
+    
 }
 .landing-student-r{
     background-color: var(--blackground);
     /* color:var(--academy-font-co); */
     height: 50vh;
     /* width: 50%; */
-  
+    
 }
 
 .landing-title{
@@ -118,9 +199,15 @@ color: var(--academy-font-co);
     justify-content: center;
 }
 
+.academy-main{
+    font-size: 70%;
+    
+}
 
-
-
+.main{
+    
+    min-height: 90vh;
+ }
 
 .nav{
     display: flex;
@@ -144,8 +231,19 @@ color: var(--academy-font-co);
     /* justify-items: center; */
 }
 
+.nav-logo{
+   display:none;
+}
+
+span{
+    color:rgb(235, 55, 196)
+}
+
 .wrapper-academy{
     background: var(--blackground);
+  
+    
+    
     color:var(--academy-font-co);
 }
 .wrapper-client{
@@ -153,31 +251,67 @@ color: var(--academy-font-co);
     color: var(--client-font-co);
 }
 
-.wrapper-contact{
+.wrapper-contact, .wrapper-gallery{
     background-color: var(--whiteground);
     min-height: 90vh;
 }
 
 /* keyframe */
-@keyframes  slideLeft{
-    from{
-        transform: translate();
+
+
+
+@keyframes  slide-left{
+    0% {
+        transform: translatex(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translatex(-100%);
+        opacity: 0;
+    }
+
+}
+
+@keyframes  slide-right{
+    0% {
+        transform: translatex(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translatex(100%);
+        opacity: 0;
     }
 }
 
-@keyframes  slideRight{
-
-}
-
 .grow{
-    background-color: red;
+    animation: slide-right 2000ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 .r-grow{
-    background-color: rgb(28, 87, 214);
+    animation: slide-left 2000ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
-@media screen and (min-width: 600px){
+ul{
+    padding-left: 10%;
+}
+/* Academy divs */
+/* .academy-course-info{ */
+    /* background-image: url(../media/images/smbg-acad.jpg) ; */
+    
+    /* background-size:contain; */
+    /* height: 100%; */
+ 
+/* } */
+
+@media all and (min-width: 600px){
+    
+    .academy-main{
+        font-size: 80%;
+    }
     
     .landing{
         display: flex;
@@ -200,6 +334,7 @@ color: var(--academy-font-co);
         display: flex;
         align-content: center;
     }
+    
     
     
     .landing-logo{
@@ -225,27 +360,55 @@ color: var(--academy-font-co);
 
 @media screen and (min-width: 768px) {
     
-
-    
-    .nav{
-        display:flex;
-        /* justify-content: space-evenly; */
-        align-items: flex-end;
-        list-style: none;
-        flex-direction: row;
-        align-content: flex-end;
+    .academy-main{
+        font-size: 90%;
     }
-
-    .logo{
-        height: 3rem;
-        margin-top: .4rem;
-        flex:1;
+    .academy-course-info{ 
+        background-image:   url(../media/images/med-acad.jpg) ;
+        background-blend-mode:multiply;
+        height: max-content;
+        max-width: fit-content;
+        margin: 0 auto;
+       } 
+        
+        
+        .header{
+            display: flex;
+            margin: 0 1rem;
+        }
+        .nav-logo{
+            display:flex;
+            height: 5rem;
+            margin-top: .4rem;
+            flex:2;
+        }
+        
+        .nav{
+            flex:1;
+            /* justify-content: flex-end; */
+            list-style: none;
+            flex-direction: row;
+            /* flex-wrap:nowrap; */
+        }
+        
+        .nav-li{
+            justify-items: flex-start;
+        }
+        
     }
     
-
-.nav-li{
-    justify-items: flex-start;
-}
-
-
-}
+    @media screen and (min-width: 1024px) {
+        .academy-main{
+            font-size: 100%;
+        }
+        /* .academy-main-heading{
+            flex-direction: row;
+            justify-content: space-around;
+        } */
+        .academy-course-info{
+            background-image: url(../media/images/lgbg-acad.jpg) ;
+            width: 70%;
+            /* background: linear-gradient(rgba(0, 0, 0, .5)) ; */
+        } 
+        
+    }
